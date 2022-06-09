@@ -1,0 +1,16 @@
+<h1>List</h1>
+<ul *ngFor="let i of data">
+  <app-card
+    [name]="i.name"
+    [description]="i.description"
+    (details)="onDisplay($event)"
+  ></app-card>
+</ul>
+
+<hr />
+
+<div *ngIf="list.length">
+  <b>{{ list[0] }}</b>
+  <p>{{ list[1] }}</p>
+  <button>Save</button>
+</div>
